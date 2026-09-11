@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Service Areas & FAQ | Haveli Indian Bistro — Indian Food Delivery in Surrey BC",
   description:
-    "Serving Newton, Fleetwood, Guildford, Whalley, Cloverdale, Sullivan, Panorama Ridge, Fraser Heights, Delta, Langley & White Rock. Late-night delivery till 4 AM.",
+    "Serving Newton, Fleetwood, Guildford, Whalley, Cloverdale, Sullivan, Panorama Ridge, Fraser Heights, Delta, Langley & White Rock. Late-night kitchen till 1 AM on weeknights and 2 AM on Fri–Sat.",
 };
 
 const areas = [
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Are you open late at night in Surrey?",
-    a: "Yes — Haveli is one of Surrey's best late-night restaurants. We're open until 4:00 AM every day. Craving butter chicken at midnight? We've got you.",
+    a: "Yes — Haveli is one of Surrey's best late-night restaurants. We're open till 1:00 AM Sunday–Thursday and 2:00 AM Friday–Saturday. Craving butter chicken at midnight? We've got you.",
   },
   {
     q: "Do you have a party hall for events and birthdays in Surrey?",

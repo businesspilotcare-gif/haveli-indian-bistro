@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import SmartImg from "./smart-img";
 
 export type Dish = {
   img: string;
@@ -80,8 +81,26 @@ export default function HomeCarousel({ dishes }: { dishes: Dish[] }) {
     track.scrollTo({ left: step * idx, behavior: "smooth" });
   };
 
+  // Keyboard support: arrows work while the carousel has focus
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      scrollBy(-1);
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      scrollBy(1);
+    }
+  };
+
   return (
-    <div className="carousel-wrap">
+    <div
+      className={`carousel-wrap ${showPrev ? "has-prev" : ""} ${showNext ? "has-next" : ""}`}
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Signature dishes"
+      tabIndex={0}
+      onKeyDown={onKeyDown}
+    >
       <button
         className="car-arrow car-prev"
         type="button"
@@ -95,7 +114,7 @@ export default function HomeCarousel({ dishes }: { dishes: Dish[] }) {
         {dishes.map((d) => (
           <figure className="car-card" key={d.name}>
             <div className={`ph ${d.tone}`} role="img" aria-label={d.alt}>
-              {d.img ? <img src={d.img} alt={d.alt} loading="lazy" /> : null}
+              {d.img ? <SmartImg src={d.img} alt={d.alt} /> : null}
             </div>
             <figcaption>
               {d.name}

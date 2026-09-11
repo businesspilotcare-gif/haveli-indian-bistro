@@ -3,7 +3,7 @@ import ReservationForm from "./reservation-form";
 export const metadata = {
   title: "Reservations | Haveli Indian Bistro — Book a Table in Surrey BC",
   description:
-    "Reserve a table at Haveli Indian Bistro via OpenTable or call (604) 503-1266. Open every day 11 AM – 4 AM near King George SkyTrain, Surrey BC.",
+    "Reserve a table at Haveli Indian Bistro via OpenTable or call (604) 503-1266. Open late daily — 1 AM close Sun–Thu, 2 AM close Fri–Sat — near King George SkyTrain, Surrey BC.",
 };
 
 export default function Reservations() {
@@ -74,8 +74,12 @@ export default function Reservations() {
               <table className="hours-table">
                 <tbody>
                   <tr>
-                    <td>Every Day</td>
-                    <td>11:00 AM – 4:00 AM</td>
+                    <td>Sun – Thu</td>
+                    <td>11:00 AM – 1:00 AM</td>
+                  </tr>
+                  <tr>
+                    <td>Fri – Sat</td>
+                    <td>11:00 AM – 2:00 AM</td>
                   </tr>
                 </tbody>
               </table>

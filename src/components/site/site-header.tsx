@@ -1,7 +1,8 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { SITE } from "@/lib/site";
 
 const links = [
   { href: "/", label: "Home" },
@@ -13,14 +14,41 @@ const links = [
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    const raf = requestAnimationFrame(onScroll);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  // Lock body scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  // Close the mobile menu when the route changes (links also close it on click;
+  // this covers browser back/forward navigation)
+  useEffect(() => {
+    const close = () => setOpen(false);
+    window.addEventListener("popstate", close);
+    return () => window.removeEventListener("popstate", close);
+  }, []);
 
   return (
     <>
-      <header className="nav">
+      <header className={`nav ${scrolled ? "scrolled" : ""}`}>
         <div className="nav-wrap">
           <div className="nav-row-top">
-            <a className="brand" href="/">
+            <a className="brand" href="/" aria-label="Haveli Indian Bistro — home">
               <span
                 className="brand-logo"
                 style={
@@ -29,7 +57,7 @@ export default function SiteHeader() {
                   } as React.CSSProperties
                 }
               >
-                <img src="/assets/uploads/haveli-logo-maroon.png" alt="Haveli Indian Bistro" />
+                <img src="/assets/uploads/haveli-logo-maroon.png" alt="" />
                 <span className="brand-logo-shine" aria-hidden="true" />
               </span>
               <span className="brand-text">
@@ -58,6 +86,7 @@ export default function SiteHeader() {
             <button
               className="menu-toggle"
               aria-label="Open menu"
+              aria-expanded={open}
               onClick={() => setOpen(true)}
             >
               &#9776;
@@ -76,7 +105,11 @@ export default function SiteHeader() {
           </div>
         </div>
       </header>
-      <nav className={`mobile-menu ${open ? "open" : ""}`} aria-label="Mobile">
+      <nav
+        className={`mobile-menu ${open ? "open" : ""}`}
+        aria-label="Mobile"
+        aria-hidden={!open}
+      >
         <button className="mobile-close" aria-label="Close menu" onClick={() => setOpen(false)}>
           &times;
         </button>
@@ -91,6 +124,10 @@ export default function SiteHeader() {
         <a href="/order" onClick={() => setOpen(false)}>
           Order Now
         </a>
+        <div className="mobile-menu-meta">
+          <span>{SITE.address.street}, {SITE.address.city} {SITE.address.province}</span>
+          <a href="tel:+16045031266">{SITE.phoneDisplay}</a>
+        </div>
       </nav>
     </>
   );

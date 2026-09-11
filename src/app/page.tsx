@@ -1,6 +1,8 @@
 import HomeCarousel from "@/components/site/home-carousel";
 import Collage from "@/components/site/collage";
 import HeroVideo from "@/components/site/hero-video";
+import SmartImg from "@/components/site/smart-img";
+import { SITE } from "@/lib/site";
 
 const video1 = "/assets/uploads/home_img8-mos-haveli-video-tvs-1--baf221.mp4";
 const video2 = "/assets/uploads/home_img8-mos-haveli-video-tvs-2--d8a665.mp4";
@@ -86,26 +88,32 @@ const areas = [
 const reviews = [
   {
     text: "Went to Haveli for my best friend's birthday and had such a great experience! The vibes were amazing, the food was super good, and they even surprised us with a complimentary birthday brownie and ice cream. Our server Harpreet went above and beyond.",
+    name: "Arshi Sandhu",
     src: "Google review",
   },
   {
     text: "A huge shout-out to our server Hirean! His expertise with the drink menu was spot-on, and the cocktails were absolutely delicious. Haveli is a cocktail paradise and has tasty food options.",
+    name: "Srishty Dhawan",
     src: "Google review",
   },
   {
     text: "Best dum biryani I have tasted. Great portions. Love the packaging too — no spillage, no mess. I just love the flavors. I will definitely be ordering again!",
+    name: "Raman K.",
     src: "Uber Eats review",
   },
   {
     text: "The chicken noodles, veg Manchurian, and achari paneer were packed with flavor. The chicken tikka masala and goat masala were both rich, tender, and satisfying. We'll definitely be back.",
+    name: "Gurpreet B.",
     src: "Google review",
   },
   {
     text: "Delicious dinner with excellent service and lots of varieties to choose from. The live music was very entertaining and the manager came and checked on us — very nice!",
+    name: "Jasmin A.",
     src: "TripAdvisor review",
   },
   {
     text: "Yummy samosa chaat! Chutney on the side in 2 types, and LOTS of extra chana. Dal makhni and chana masala are delicious — ordered 3 times in a row. Affordable pricing and fast delivery.",
+    name: "Harman P.",
     src: "Uber Eats review",
   },
 ];
@@ -155,9 +163,9 @@ export default function Home() {
       <section className="hero" style={{ padding: 0, ["--ov" as string]: "0.09" }}>
         <Hero />
         <div className="hero-content">
-          <h1>Indian Flavours, Elevated</h1>
+          <h1 className="hero-title-in">Indian Flavours, Elevated</h1>
           <p className="hero-sub" />
-          <div className="hero-ctas">
+          <div className="hero-ctas hero-ctas-in">
             <a className="link-cta light" style={{ fontSize: 15, letterSpacing: 3 }} href="/reservations">
               Reserve now
             </a>
@@ -166,22 +174,22 @@ export default function Home() {
       </section>
 
       {/* ── INFO STRIP ───────────────────────────────────── */}
-      <div className="info-strip">
+      <div className="info-strip" data-reveal>
         <div className="wrap">
           <div className="info-cell">
             <div className="k">Location</div>
-            <div className="v">7488 King George Blvd, Unit 350</div>
+            <div className="v">{SITE.address.street}</div>
           </div>
           <div className="info-cell">
             <div className="k">Hours</div>
             <div className="v hours-v">
-              {"Open Daily  11 am - 01 AM (Sunday-Thursday)\n11am- 1:45 am (Friday-Saturday)"}
+              {"Open Daily  11 AM – 1 AM (Sunday–Thursday)\n11 AM – 2 AM (Friday–Saturday)"}
             </div>
           </div>
           <div className="info-cell">
             <div className="k">Reservations</div>
             <div className="v">
-              <a href="tel:+16045031266">(604) 503-1266</a>
+              <a href={SITE.phoneHref}>{SITE.phoneDisplay}</a>
             </div>
           </div>
         </div>
@@ -190,15 +198,15 @@ export default function Home() {
       {/* ── STATEMENT ────────────────────────────────────── */}
       <section>
         <div className="wrap statement">
-          <h2>Bold flavours. Warm hospitality. Open late.</h2>
-          <div className="statement-side">
+          <h2 data-reveal>Bold flavours. Warm hospitality. Open late.</h2>
+          <div className="statement-side" data-reveal data-reveal-delay="130">
             <p>
               Haveli Indian Bistro began with a simple dream: to share the vibrant tapestry of
               Indian cuisine with the community of Surrey. &quot;Haveli&quot; — the Urdu and Hindi
               word for a grand ancestral mansion — embodies our vision: a home for authentic
               Indian cuisine in the heart of Surrey, BC, crafted with traditional techniques, the
-              finest spices, live music evenings and a cocktail bar that stays open until 1:00 AM
-              every Sunday to Thursday and 1:45 AM every Friday and Saturday.
+              finest spices, live music evenings and a kitchen that stays open until 1:00 AM
+              every Sunday to Thursday and 2:00 AM every Friday and Saturday.
             </p>
             <div style={{ marginTop: 22 }}>
               <a className="link-cta" href="/about">
@@ -261,13 +269,13 @@ export default function Home() {
       {/* ── DUO: LUNCH + LATE NIGHT ──────────────────────── */}
       <section>
         <div className="wrap duo">
-          <div>
+          <div data-reveal>
             <div
               className="ph crimson"
               role="img"
               aria-label="Lunch buffet spread at Haveli Indian Bistro Surrey BC"
             >
-              <img src="/assets/uploads/home_img9.jpg" alt="Lunch buffet spread at Haveli Indian Bistro Surrey BC" loading="lazy" />
+              <SmartImg src={`${up}home_img9.jpg`} alt="Lunch buffet spread at Haveli Indian Bistro Surrey BC" />
             </div>
             <h3>The CA$17 Lunch Special</h3>
             <p>
@@ -278,18 +286,18 @@ export default function Home() {
               View lunch menu
             </a>
           </div>
-          <div>
+          <div data-reveal data-reveal-delay="140">
             <div
               className="ph slate"
               role="img"
               aria-label="Late night dining at Haveli Indian Bistro near King George SkyTrain"
             >
-              <img src="/assets/uploads/home_img10.jpg" alt="Late night dining at Haveli Indian Bistro near King George SkyTrain" loading="lazy" />
+              <SmartImg src={`${up}home_img10.jpg`} alt="Late night dining at Haveli Indian Bistro near King George SkyTrain" />
             </div>
             <h3>The Late-Night Fix You&apos;re Craving</h3>
             <p>
-              Open until 4:00 AM every single day. Midnight butter chicken near King George
-              SkyTrain? We&apos;ve got you.
+              Open late every single day — till 1 AM on weeknights, 2 AM on Fridays &amp;
+              Saturdays. Midnight butter chicken near King George SkyTrain? We&apos;ve got you.
             </p>
             <a className="link-cta" href="/areas-faq">
               Late-night details
@@ -301,12 +309,28 @@ export default function Home() {
       {/* ── REVIEWS ──────────────────────────────────────── */}
       <section className="reviews-band">
         <div className="wrap">
+          <div className="sec-head" data-reveal>
+            <div>
+              <span className="eyebrow">Guest love</span>
+              <h2>What our customers say</h2>
+            </div>
+            <div className="rating-line">
+              <span className="big">5.0</span>
+              <span className="meta">Rated across Google &middot; Uber Eats &middot; TripAdvisor</span>
+            </div>
+          </div>
           <div className="review-grid">
             {reviews.map((r, i) => (
-              <div className="review" key={i}>
-                <div className="stars">★★★★★</div>
+              <div className="review" key={i} data-reveal data-reveal-delay={(i % 3) * 110}>
+                <div className="stars" aria-label="Rated 5 out of 5">★★★★★</div>
                 <p>{r.text}</p>
-                <div className="src">{r.src}</div>
+                <div className="r-meta">
+                  <span className="r-ava" aria-hidden="true">{r.name.trim()[0]}</span>
+                  <span className="r-who">
+                    <b>{r.name}</b>
+                    <i>{r.src}</i>
+                  </span>
+                </div>
               </div>
             ))}
           </div>
@@ -330,8 +354,9 @@ export default function Home() {
             className="ph slate no-zoom"
             role="img"
             aria-label="Private party hall at Haveli Indian Bistro Surrey — event venue"
+            data-reveal
           >
-            <img src="/assets/uploads/home_img11-ab851b.jpg" alt="Private party hall at Haveli Indian Bistro Surrey — event venue" loading="lazy" />
+            <SmartImg src={`${up}home_img11-ab851b.jpg`} alt="Private party hall at Haveli Indian Bistro Surrey — event venue" />
           </div>
         </div>
       </section>
@@ -349,8 +374,8 @@ export default function Home() {
           </a>
         </div>
         <div className="wrap area-grid">
-          {areas.map((a) => (
-            <div className="area-card" key={a.name}>
+          {areas.map((a, i) => (
+            <div className="area-card" key={a.name} data-reveal data-reveal-delay={(i % 4) * 80}>
               <h3>{a.name}</h3>
               <p>{a.desc}</p>
             </div>
@@ -360,7 +385,7 @@ export default function Home() {
 
       {/* ── SEO COPY ─────────────────────────────────────── */}
       <section className="seo-copy">
-        <div className="wrap inner">
+        <div className="wrap inner" data-reveal>
           <h2>Authentic Indian food on King George Blvd, Surrey</h2>
           <p>
             Just steps from King George SkyTrain Station, Haveli Indian Bistro is the go-to
@@ -384,10 +409,10 @@ export default function Home() {
           </a>
         </div>
         <div className="wrap blog-grid">
-          {posts.map((p) => (
-            <a className="blog-card" key={p.title} href={p.href}>
+          {posts.map((p, i) => (
+            <a className="blog-card" key={p.title} href={p.href} data-reveal data-reveal-delay={i * 120}>
               <div className="ph crimson" role="img" aria-label={p.alt}>
-                <img src={p.img} alt={p.alt} loading="lazy" />
+                <SmartImg src={p.img} alt={p.alt} />
               </div>
               <span className="tag">{p.tag}</span>
               <h3>{p.title}</h3>

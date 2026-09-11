@@ -1,17 +1,17 @@
 export const metadata = {
   title: "Contact Us | Haveli Indian Bistro — 7488 King George Blvd, Surrey BC",
   description:
-    "Visit Haveli Indian Bistro at 7488 King George Blvd, Unit 350, Surrey BC. Open every day 11 AM – 4 AM. Call (604) 503-1266. Free parking, near King George SkyTrain.",
+    "Visit Haveli Indian Bistro at 7488 King George Blvd, Unit 350, Surrey BC. Open late daily: 11 AM – 1 AM Sun–Thu, 11 AM – 2 AM Fri–Sat. Call (604) 503-1266. Free parking, near King George SkyTrain.",
 };
 
-const hours = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
+const hours: [string, string][] = [
+  ["Monday", "11:00 AM – 1:00 AM"],
+  ["Tuesday", "11:00 AM – 1:00 AM"],
+  ["Wednesday", "11:00 AM – 1:00 AM"],
+  ["Thursday", "11:00 AM – 1:00 AM"],
+  ["Friday", "11:00 AM – 2:00 AM"],
+  ["Saturday", "11:00 AM – 2:00 AM"],
+  ["Sunday", "11:00 AM – 1:00 AM"],
 ];
 
 export default function Contact() {
@@ -48,10 +48,10 @@ export default function Contact() {
             <h2 style={{ fontSize: "clamp(26px,3.2vw,40px)", marginBottom: 20 }}>Opening hours</h2>
             <table className="hours-table">
               <tbody>
-                {hours.map((d) => (
+                {hours.map(([d, h]) => (
                   <tr key={d}>
                     <td>{d}</td>
-                    <td>11:00 AM – 4:00 AM</td>
+                    <td>{h}</td>
                   </tr>
                 ))}
               </tbody>
@@ -74,10 +74,21 @@ export default function Contact() {
               <br />
               <a href="tel:+16045031266">(604) 503-1266</a>
             </p>
-            <p style={{ fontSize: 15, marginBottom: 22 }}>
+            <p style={{ fontSize: 15, marginBottom: 14 }}>
               <b>Web:</b>
               <br />
               haveliindianbistro.com
+            </p>
+            <p style={{ fontSize: 15, marginBottom: 22 }}>
+              <b>Follow us:</b>
+              <br />
+              <span className="contact-socials">
+                <a href="https://www.facebook.com/people/Haveli-Bistro/100093571557340/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <span aria-hidden="true"> · </span>
+                <a href="https://www.instagram.com/haveliindianbistro" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <span aria-hidden="true"> · </span>
+                <a href="https://www.youtube.com/@HaveliBistro" target="_blank" rel="noopener noreferrer">YouTube</a>
+              </span>
             </p>
             <p style={{ color: "var(--grey)", fontSize: 14, marginBottom: 24 }}>
               Free parking available near the restaurant
@@ -99,21 +110,25 @@ export default function Contact() {
               Reserve online
             </a>
             <div
+              className="map-embed"
               style={{
                 marginTop: 32,
                 aspectRatio: "16/9",
                 borderRadius: 8,
-                background:
-                  "linear-gradient(135deg,#1d1014,#3a1219 55%,#59212b)",
+                overflow: "hidden",
                 border: "1px solid var(--panel-line)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "var(--grey)",
-                fontSize: 14,
               }}
             >
-              Map — 7488 King George Blvd, Surrey BC
+              <iframe
+                title="Map — Haveli Indian Bistro, 7488 King George Blvd Unit 350, Surrey BC"
+                src="https://maps.google.com/maps?q=7488%20King%20George%20Blvd%20Unit%20350%2C%20Surrey%2C%20BC%20V3W%200H9&z=15&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: "block", filter: "invert(0.92) hue-rotate(180deg) saturate(0.72) brightness(0.92)" }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>

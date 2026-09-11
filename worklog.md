@@ -18,3 +18,27 @@ Work Log:
 Stage Summary:
 - Deliverable: full multi-page Next.js replica of the Haveli Indian Bistro site at /home/z/my-project (src/app/* pages, src/components/site/* components, public/assets/uploads/* media)
 - All original content, imagery, videos, theme and interactions reproduced; 3 dishes intentionally render as gradient placeholders exactly like the live site (Fish Pakora, Dal Makhni, Cocktails cards)
+
+---
+Task ID: 2
+Agent: Super Z (main agent)
+Task: Iteration 2 — polish the replica, QA against the real production site (haveliindianbistro.com) so the new site can replace it
+
+Work Log:
+- Fetched & analyzed the production site (React/Vite SPA by AIOrders): extracted official contact info, per-day hours, social URLs (FB/IG/YT), offers (FIRST35 35% off first order, REPEAT15 15% off 2nd+), review names, geo coords (49.13872,-122.842709) and full sitemap
+- Discovered staging site's own hours were internally inconsistent (promo bar "till 1AM", info bar "1:45 AM", footer "4 AM"); standardized everything to production's official table: Sun–Thu 11 AM–1 AM, Fri–Sat 11 AM–2 AM across promo bar, info strip, statement, late-night card, footer, contact/reservations/about/areas-faq pages and metadata
+- Created src/lib/site.ts as single source of truth (address, phone, hours, socials, offers, geo) + Restaurant JSON-LD schema injected in root layout
+- Production-aligned metadata (title "Haveli Indian Bistro: Authentic Indian Cuisine in Surrey", OG/Twitter tags), theme-color, canonical
+- Added footer social icon buttons (FB/IG/YT), legal links row, corrected hours block; contact page gained Follow Us links + real dark-filtered Google Maps embed
+- Built 3 legal pages for clean replacement: /privacy-policy, /terms-and-conditions, /accessibility-statement (shared LegalPage components + styles)
+- Promo bar now rotates 4 slides: BOGO biryani, FIRST35, REPEAT15, corrected hours
+- Reviews upgraded to production style: 5.0 rating header + avatar initials + reviewer names + source labels
+- POLISH LAYER: global IntersectionObserver scroll-reveal engine (data-reveal, staggered), SmartImg fade-in-on-load images, sticky header now compact+shadow on scroll, nav underline sweep, link-cta arrow slide hover, btn-gold shine sweep, carousel edge fades + keyboard arrows, hero text entrance animation, page-enter fade, gold focus-visible rings, form field hover/focus transitions, area/blog/dish hover micro-interactions, ::selection gold — all honoring prefers-reduced-motion
+- BUG FIXES: sticky header never worked in iteration 1 (overflow-x:hidden on html/body broke position:sticky — fixed with overflow-x:clip); lint errors (setState-in-effect ×2); ESLint now ignores tool-results/download/scripts dirs
+- Added app/sitemap.ts (12 URLs) and sitemap directive in public/robots.txt (removed conflicting app/robots.ts)
+- QA with agent-browser: 12/12 routes 200, cart math verified (2×$17+$17=$51 + 5% GST = $53.55), reservation + party-hall forms submit with success states, FAQ accordion, mobile menu + sticky bar + hero on iPhone 14, header scroll state, promo rotation, zero console errors, lint clean
+
+Stage Summary:
+- Site is now polished (smooth reveals, fade-ins, micro-interactions), info-accurate vs production, SEO-complete (JSON-LD, sitemap, robots, OG) and ready to replace haveliindianbistro.com
+- Canonical hours everywhere: Sun–Thu 11 AM–1 AM, Fri–Sat 11 AM–2 AM
+- All 12 routes live: /, /about, /menu, /party-hall, /contact, /areas-faq, /blog, /reservations, /order, /privacy-policy, /terms-and-conditions, /accessibility-statement

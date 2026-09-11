@@ -9,9 +9,19 @@ const slides = [
     text: "BOGO DUM BIRYANI — BUY 1 GET 1 FREE: VIEW MENU",
   },
   {
+    bg: "#B8862B",
+    href: "/order",
+    text: "FIRST ORDER? 35% OFF WITH CODE FIRST35: ORDER NOW",
+  },
+  {
+    bg: "#9E6B1F",
+    href: "/order",
+    text: "15% OFF FROM YOUR 2ND ORDER — CODE REPEAT15",
+  },
+  {
     bg: "#C9A03A",
-    href: "/areas-faq",
-    text: "OPEN LATE TILL 1 AM EVERY NIGHT: SEE HOURS",
+    href: "/contact",
+    text: "OPEN LATE NIGHTLY — TILL 1 AM SUN–THU · 2 AM FRI–SAT: SEE HOURS",
   },
 ];
 
@@ -27,9 +37,18 @@ export default function PromoBar() {
   }, []);
 
   return (
-    <div className="promo-bar" id="promoBar" style={{ background: slides[active].bg }}>
+    <div
+      className="promo-bar"
+      id="promoBar"
+      style={{ background: slides[active].bg, transition: "background .7s ease" }}
+    >
       {slides.map((s, i) => (
-        <a key={i} className={`promo-slide ${i === active ? "on" : ""}`} href={s.href}>
+        <a
+          key={i}
+          className={`promo-slide ${i === active ? "on" : ""}`}
+          href={s.href}
+          aria-hidden={i !== active}
+        >
           <span>{s.text}</span>
         </a>
       ))}

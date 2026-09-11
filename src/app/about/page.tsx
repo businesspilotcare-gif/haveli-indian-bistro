@@ -109,7 +109,7 @@ export default function About() {
         <div className="wrap">
           <div className="info-cell">
             <div className="k">Open late</div>
-            <div className="v">Until 4 AM every night</div>
+            <div className="v">Till 1 AM Sun–Thu · 2 AM Fri–Sat</div>
           </div>
           <div className="info-cell">
             <div className="k">Live music</div>
