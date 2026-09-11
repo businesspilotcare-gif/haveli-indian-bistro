@@ -1,0 +1,646 @@
+[
+ {
+  "name": "Lunch Special",
+  "note": "11:00 AM – 4:00 PM daily &middot; 7 days a week",
+  "bogo": false,
+  "dishes": [
+   {
+    "name": "7 Days a Week Lunch BuffetPer person",
+    "desc": "Rotating selection of curries, tandoori items, rice, dal, salad, raita, naan &amp; dessert. Chef's selection changes daily featuring the freshest seasonal ingredients.",
+    "price": "CA$17",
+    "badges": [
+     "Per person"
+    ]
+   },
+   {
+    "name": "Butter Chicken + NaanPopular",
+    "desc": "Lunch portion — tender chicken in creamy tomato sauce with 1 butter naan",
+    "price": "CA$17",
+    "badges": [
+     "Popular"
+    ]
+   },
+   {
+    "name": "Shahi Paneer ThaliVeg",
+    "desc": "Shahi paneer, dal makhni, rice, salad, raita &amp; naan",
+    "price": "CA$17",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Chicken Tikka Masala LunchPopular",
+    "desc": "Rich tikka masala gravy, basmati rice, salad, naan",
+    "price": "CA$17",
+    "badges": [
+     "Popular"
+    ]
+   },
+   {
+    "name": "Dal Makhni + Tawa ParathaVeg",
+    "desc": "Slow-cooked black lentil dal with 2 pieces tawa paratha, salad &amp; pickle",
+    "price": "CA$17",
+    "badges": [
+     "Veg"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Appetizers — Veg",
+  "note": "",
+  "bogo": false,
+  "dishes": [
+   {
+    "name": "Veg Samosa (2 pcs)Veg",
+    "desc": "Crispy pastry filled with spiced potatoes and peas, served with tamarind chutney",
+    "price": "CA$8",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Veg PakoraVeg",
+    "desc": "Delicately spiced vegetables marinated in tangy chickpea batter and deep fried",
+    "price": "CA$13",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Paneer PakoraVeg",
+    "desc": "Homemade cheese marinated in chickpea flour batter and fried to golden perfection",
+    "price": "CA$15",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Aloo Tikki (2 pcs)Veg",
+    "desc": "Spiced potato patties pan-fried and served with green chutney and tamarind",
+    "price": "CA$10",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Hara Bhara KababVeg",
+    "desc": "Spinach, green pea and potato patties infused with aromatic spices",
+    "price": "CA$14",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Haveli Veg Combo PlatterBest value",
+    "desc": "Veg samosa, veg pakora, paneer pakora &amp; aloo tikki — perfect for sharing",
+    "price": "CA$22",
+    "badges": [
+     "Best value"
+    ]
+   },
+   {
+    "name": "Soya Chaap Malai / TandooriVeg",
+    "desc": "Soya chaap marinated in malai or tandoori spices — rich, smoky, and satisfying",
+    "price": "CA$16",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Masala FriesVeg",
+    "desc": "Golden fries tossed in our signature spice blend",
+    "price": "CA$9",
+    "badges": [
+     "Veg"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Appetizers — Non-Veg",
+  "note": "",
+  "bogo": false,
+  "dishes": [
+   {
+    "name": "Fish PakoraPopular",
+    "desc": "Tender fish pieces battered in seasoned chickpea flour and fried — a crowd favourite",
+    "price": "CA$16",
+    "badges": [
+     "Popular"
+    ]
+   },
+   {
+    "name": "Chicken Tikka (6 pcs)Popular",
+    "desc": "Boneless chicken breast marinated in yogurt and spices, charred in clay oven",
+    "price": "CA$18",
+    "badges": [
+     "Popular"
+    ]
+   },
+   {
+    "name": "Seekh Kebab (4 pcs)",
+    "desc": "Minced lamb mixed with onions, green peppers and herbs, skewered and grilled",
+    "price": "CA$17",
+    "badges": []
+   },
+   {
+    "name": "Tandoori Prawns",
+    "desc": "Jumbo prawns marinated in tandoori spices and grilled in clay oven",
+    "price": "CA$22",
+    "badges": []
+   },
+   {
+    "name": "Boti Kebab",
+    "desc": "Cubed lamb marinated overnight in yogurt and spices, grilled to perfection",
+    "price": "CA$19",
+    "badges": []
+   },
+   {
+    "name": "Haveli Non-Veg Combo PlatterBest value",
+    "desc": "Tandoori chicken, chicken tikka, fish pakora &amp; seekh kebab with mint chutney",
+    "price": "CA$34",
+    "badges": [
+     "Best value"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Tandoori",
+  "note": "From the clay oven",
+  "bogo": false,
+  "dishes": [
+   {
+    "name": "Tandoori Chicken (Half)Spicy",
+    "desc": "Classic chicken marinated in yogurt and spices, roasted in clay oven",
+    "price": "CA$19",
+    "badges": [
+     "Spicy"
+    ]
+   },
+   {
+    "name": "Tandoori Chicken (Full)",
+    "desc": "Full portion — classic tandoor marinade, smoky char, served with mint raita",
+    "price": "CA$34",
+    "badges": []
+   },
+   {
+    "name": "Paneer Tikka SizzlerVeg",
+    "desc": "Homemade cheese marinated in yogurt and cashew paste, grilled on sizzler",
+    "price": "CA$19",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Tandoori Veg SizzlerVeg",
+    "desc": "Paneer and mixed vegetables marinated in yogurt, onions, peppers and tomatoes on sizzler",
+    "price": "CA$18",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Tandoori Mixed Grill PlatterBest seller",
+    "desc": "Tandoori chicken, chicken tikka, fish pakora, boti kebab, chicken malai kebab &amp; naan",
+    "price": "CA$38",
+    "badges": [
+     "Best seller"
+    ]
+   },
+   {
+    "name": "Chicken Malai Kebab",
+    "desc": "Boneless chicken marinated in cream cheese and delicate spices, clay oven roasted",
+    "price": "CA$18",
+    "badges": []
+   }
+  ]
+ },
+ {
+  "name": "Chaat Corner",
+  "note": "",
+  "bogo": false,
+  "dishes": [
+   {
+    "name": "Samosa ChaatFan favVeg",
+    "desc": "Samosas topped with colorful chutneys, fresh cilantro, and crunchy thin sev",
+    "price": "CA$12",
+    "badges": [
+     "Fan fav",
+     "Veg"
+    ]
+   },
+   {
+    "name": "Papdi ChaatVeg",
+    "desc": "Special chips with chickpeas, potatoes topped with yogurt and tamarind sauce",
+    "price": "CA$11",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Pani Puri (6 pcs)Veg",
+    "desc": "Thin fried semolina balls filled with spiced vegetables and flavorful chutneys",
+    "price": "CA$10",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Chana ChaatVeg",
+    "desc": "Chopped red onions, tomatoes, cucumber and chickpeas tossed in lemon",
+    "price": "CA$10",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Chaat Papri (BOGO)BOGO",
+    "desc": "Buy one get one — crispy papdi topped with yogurt, chutneys and sev",
+    "price": "CA$9",
+    "badges": [
+     "BOGO"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Indo-Chinese",
+  "note": "",
+  "bogo": false,
+  "dishes": [
+   {
+    "name": "Manchurian (Veg)BOGOVeg",
+    "desc": "Fried vegetable balls cooked with chilies and aromatic spices — a BOGO item",
+    "price": "CA$16",
+    "badges": [
+     "BOGO",
+     "Veg"
+    ]
+   },
+   {
+    "name": "Chicken NoodlesPopular",
+    "desc": "Wok-tossed noodles with chicken and fresh vegetables in Indo-Chinese sauce",
+    "price": "CA$17",
+    "badges": [
+     "Popular"
+    ]
+   },
+   {
+    "name": "Red Sauce PastaBOGOVeg",
+    "desc": "Classic pasta in our house tomato and herb red sauce",
+    "price": "CA$17",
+    "badges": [
+     "BOGO",
+     "Veg"
+    ]
+   },
+   {
+    "name": "White Sauce PastaBOGOVeg",
+    "desc": "Creamy béchamel sauce pasta with herbs and seasoning",
+    "price": "CA$17",
+    "badges": [
+     "BOGO",
+     "Veg"
+    ]
+   },
+   {
+    "name": "Rose PastaBOGOVeg",
+    "desc": "House pink sauce pasta — a blend of red and white, rich and luxurious",
+    "price": "CA$17",
+    "badges": [
+     "BOGO",
+     "Veg"
+    ]
+   },
+   {
+    "name": "Chilli Chicken (Dry)Spicy",
+    "desc": "Crispy chicken tossed in our Indo-Chinese chilli sauce with peppers and onions",
+    "price": "CA$18",
+    "badges": [
+     "Spicy"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Mains — Veg",
+  "note": "",
+  "bogo": false,
+  "dishes": [
+   {
+    "name": "Haveli Da Shahi PaneerBOGOVeg",
+    "desc": "Homemade cheese cooked in onion cream and tomato sauce — a signature dish",
+    "price": "CA$20",
+    "badges": [
+     "BOGO",
+     "Veg"
+    ]
+   },
+   {
+    "name": "Test Dish",
+    "desc": "made for testing purpose",
+    "price": "1",
+    "badges": []
+   },
+   {
+    "name": "Dal MakhniPopularVeg",
+    "desc": "Slow-cooked black lentils and kidney beans in a rich, buttery tomato sauce",
+    "price": "CA$18",
+    "badges": [
+     "Popular",
+     "Veg"
+    ]
+   },
+   {
+    "name": "Achari PaneerVeg",
+    "desc": "Cottage cheese in tangy pickled spice gravy — full of bold, complex flavours",
+    "price": "CA$19",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Chana MasalaVeg",
+    "desc": "Hearty chickpeas simmered in a robust blend of tomatoes and warming spices",
+    "price": "CA$17",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Baingan BhartaVeg",
+    "desc": "Flame-roasted eggplant mashed and cooked with tomatoes, onions and spices",
+    "price": "CA$17",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Palak PaneerVeg",
+    "desc": "Fresh spinach purée with homemade cheese cubes in a mildly spiced sauce",
+    "price": "CA$18",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Mix Veg KadhaiVeg",
+    "desc": "Seasonal vegetables cooked in a kadhai with tomatoes, peppers and aromatic spices",
+    "price": "CA$17",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Malai KoftaVeg",
+    "desc": "Paneer and vegetable dumplings in a rich, cashew-cream sauce",
+    "price": "CA$19",
+    "badges": [
+     "Veg"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Mains — Non-Veg",
+  "note": "",
+  "bogo": false,
+  "dishes": [
+   {
+    "name": "Haveli Da Butter ChickenBest seller",
+    "desc": "Tandoor-charred chicken in a velvety tomato-butter-cream sauce — our #1 dish",
+    "price": "CA$21",
+    "badges": [
+     "Best seller"
+    ]
+   },
+   {
+    "name": "Chicken Tikka MasalaPopular",
+    "desc": "Tender tikka pieces in a rich, spiced masala gravy — bold and satisfying",
+    "price": "CA$21",
+    "badges": [
+     "Popular"
+    ]
+   },
+   {
+    "name": "Goat MasalaRich",
+    "desc": "Tender goat pieces slow-cooked in an intense, aromatic masala sauce",
+    "price": "CA$24",
+    "badges": [
+     "Rich"
+    ]
+   },
+   {
+    "name": "Lamb Rogan Josh",
+    "desc": "Slow-braised lamb in a bold Kashmiri spice sauce — deeply fragrant",
+    "price": "CA$24",
+    "badges": []
+   },
+   {
+    "name": "Fish Tikka Masala",
+    "desc": "Tender fish pieces in our signature tikka masala sauce — from the grill to the pot",
+    "price": "CA$22",
+    "badges": []
+   },
+   {
+    "name": "Prawn Masala",
+    "desc": "Jumbo prawns cooked in a vibrant masala with onion, tomato and spices",
+    "price": "CA$26",
+    "badges": []
+   },
+   {
+    "name": "Chicken Korma",
+    "desc": "Chicken in a mild, fragrant yogurt and almond sauce — perfect for those who prefer mild",
+    "price": "CA$20",
+    "badges": []
+   },
+   {
+    "name": "Chicken KadhaiSpicy",
+    "desc": "Chicken cooked in a traditional kadhai with tomatoes, peppers and fresh ginger",
+    "price": "CA$21",
+    "badges": [
+     "Spicy"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Biryani",
+  "note": "Buy one, get one free — our most loved dish",
+  "bogo": true,
+  "dishes": [
+   {
+    "name": "Chicken Dum BiryaniBest seller",
+    "desc": "Chicken with bone and basmati rice slow-cooked with whole aromatic spices",
+    "price": "CA$21",
+    "badges": [
+     "Best seller"
+    ]
+   },
+   {
+    "name": "Lamb Biryani",
+    "desc": "Tender lamb pieces layered with saffron-infused basmati rice and golden onions",
+    "price": "CA$24",
+    "badges": []
+   },
+   {
+    "name": "Goat Dum Biryani",
+    "desc": "Bone-in goat cooked in the dum style — intensely flavoured and aromatic",
+    "price": "CA$24",
+    "badges": []
+   },
+   {
+    "name": "Veg Dum BiryaniVeg",
+    "desc": "Seasonal vegetables and paneer dum-cooked with fragrant basmati and spices",
+    "price": "CA$19",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Prawn Biryani",
+    "desc": "Jumbo prawns layered with aromatic basmati, fried onions and fresh herbs",
+    "price": "CA$26",
+    "badges": []
+   },
+   {
+    "name": "Biryani Thali (Serves 2)Great value",
+    "desc": "Large portion chicken biryani with raita, salad, and your choice of 1 side curry",
+    "price": "CA$36",
+    "badges": [
+     "Great value"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Breads &amp;amp; Rice",
+  "note": "",
+  "bogo": false,
+  "dishes": [
+   {
+    "name": "Butter NaanVeg",
+    "desc": "Soft leavened bread baked in clay oven, brushed with butter and herbs",
+    "price": "CA$4",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Garlic NaanVeg",
+    "desc": "Clay oven naan loaded with fresh garlic and coriander",
+    "price": "CA$5",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Tawa Paratha (2 pcs)BOGOVeg",
+    "desc": "Layered whole-wheat flatbread cooked on griddle — served with butter, salad, pickle &amp; dahi",
+    "price": "CA$16",
+    "badges": [
+     "BOGO",
+     "Veg"
+    ]
+   },
+   {
+    "name": "Stuffed Kulcha (Aloo/Paneer)Veg",
+    "desc": "Clay oven bread stuffed with spiced potato or paneer filling",
+    "price": "CA$7",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Steamed Basmati RiceVeg",
+    "desc": "Fragrant long-grain basmati rice, perfectly steamed",
+    "price": "CA$6",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Jeera RiceVeg",
+    "desc": "Basmati rice tempered with cumin seeds and whole spices",
+    "price": "CA$7",
+    "badges": [
+     "Veg"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Drinks &amp;amp; Desserts",
+  "note": "",
+  "bogo": false,
+  "dishes": [
+   {
+    "name": "Haveli Lime Soda (Masala Soda)Favourite",
+    "desc": "Our signature masala lime soda — refreshing, tangy and perfectly spiced",
+    "price": "CA$11",
+    "badges": [
+     "Favourite"
+    ]
+   },
+   {
+    "name": "Mango LassiVeg",
+    "desc": "Creamy yogurt blended with fresh mango — sweet, thick and refreshing",
+    "price": "CA$7",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Masala ChaiVeg",
+    "desc": "Traditional spiced Indian tea brewed with ginger, cardamom and fresh milk",
+    "price": "CA$5",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Haveli Special CocktailsCocktail bar",
+    "desc": "&ldquo;Haveli is a cocktail paradise&rdquo; — ask your server for our seasonal cocktail menu",
+    "price": "CA$12+",
+    "badges": [
+     "Cocktail bar"
+    ]
+   },
+   {
+    "name": "Gulab Jamun (4 pcs)Veg",
+    "desc": "Soft milk-solid dumplings soaked in rose-cardamom syrup — a classic Indian dessert",
+    "price": "CA$9",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "Gajrela (Carrot Halwa)Chef&#039;s favouriteVeg",
+    "desc": "Slow-cooked carrot pudding with milk, ghee, cardamom and garnished with pistachios",
+    "price": "CA$9",
+    "badges": [
+     "Chef&#039;s favourite",
+     "Veg"
+    ]
+   },
+   {
+    "name": "Mango KulfiVeg",
+    "desc": "Traditional Indian ice cream — rich, dense and loaded with mango flavour",
+    "price": "CA$8",
+    "badges": [
+     "Veg"
+    ]
+   },
+   {
+    "name": "MilkshakesVeg",
+    "desc": "Mango, Strawberry, Chocolate or Vanilla — thick and freshly blended",
+    "price": "CA$9",
+    "badges": [
+     "Veg"
+    ]
+   }
+  ]
+ }
+]
